@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>slider</title>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" ></script>
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-migrate/3.1.0/jquery-migrate.min.js"></script> -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css" rel="stylesheet"/>
+<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.css"  /> -->
+<style type="text/css">
+  @charset "utf-8";
+/* slick original */
+/* Slider */
+.slick-slider
+{
+    position: relative;
+
+    display: block;
+    box-sizing: border-box;
+
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+
+    -webkit-touch-callout: none;
+    -khtml-user-select: none;
+    -ms-touch-action: pan-y;
+        touch-action: pan-y;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.slick-list
+{
+    position: relative;
+
+    display: block;
+    overflow: hidden;
+
+    margin: 0;
+    padding: 0;
+}
+.slick-list:focus
+{
+    outline: none;
+}
+.slick-list.dragging
+{
+    cursor: pointer;
+    cursor: hand;
+}
+
+.slick-slider .slick-track,
+.slick-slider .slick-list
+{
+    -webkit-transform: translate3d(0, 0, 0);
+       -moz-transform: translate3d(0, 0, 0);
+        -ms-transform: translate3d(0, 0, 0);
+         -o-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+}
+
+.slick-track
+{
+    position: relative;
+    top: 0;
+    left: 0;
+
+    display: block;
+}
+.slick-track:before,
+.slick-track:after
+{
+    display: table;
+
+    content: '';
+}
+.slick-track:after
+{
+    clear: both;
+}
+.slick-loading .slick-track
+{
+    visibility: hidden;
+}
+
+.slick-slide
+{
+    display: none;
+    float: left;
+
+    height: 100%;
+    min-height: 1px;
+}
+[dir='rtl'] .slick-slide
+{
+    float: right;
+}
+.slick-slide img
+{
+    display: block;
+}
+.slick-slide.slick-loading img
+{
+    display: none;
+}
+.slick-slide.dragging img
+{
+    pointer-events: none;
+}
+.slick-initialized .slick-slide
+{
+    display: block;
+}
+.slick-loading .slick-slide
+{
+    visibility: hidden;
+}
+.slick-vertical .slick-slide
+{
+    display: block;
+
+    height: auto;
+
+    border: 1px solid transparent;
+}
+.slick-arrow.slick-hidden {
+    display: none;
+}
+
+
+
+
+
+
+
+.slick-thumbs{ display: block; width: 100%; }
+img{ max-width: 100%; max-height: 100%; }
+
+.slick-big-wrap img{ width: 100%; }
+
+.slick-center .slick-slide{ text-align: center; border:1px solid #eee; }
+.slick-center img{ text-align: center; margin:0 auto; }
+.slick-center .slick-list, .slick-center .slick-track{ overflow: visible; }
+.slick-center .slick-current { width: 0 30px; top: 50%; -webkit-transform: scale(1.3);
+-ms-transform: scale(1.3);
+-o-transform: scale(1.3);
+transform: scale(1.3); -webkit-transform-origin: center center;
+-moz-transform-origin: center center;
+-ms-transform-origin: center center;
+-o-transform-origin: center center;
+transform-origin: center center;  -webkit-transition: transform .3s ease;
+-o-transition: transform .3s ease;
+transition: transform .3s ease;}
+
+.center{
+  text-align: center;
+  margin-top: 50px;
+}
+
+</style>
+</head>
+
+<body>
+    <div class="slick-center-wrap">
+    
+    <ul class="slick-center">
+    <div>
+      <img src="" data-lazy="https://i.picsum.photos/id/237/300/300.jpg">
+    </div>
+    <div>
+      <img src="" data-lazy="https://i.picsum.photos/id/238/300/300.jpg">
+    </div>
+    <div>
+      <img src="" data-lazy="https://i.picsum.photos/id/239/300/300.jpg">
+    </div>
+    <div>
+      <img src="" data-lazy="https://i.picsum.photos/id/240/300/300.jpg">
+    </div>
+    <div>
+      <img src="" data-lazy="https://i.picsum.photos/id/241/300/300.jpg">
+    </div>
+    <div>
+      <img src="" data-lazy="https://i.picsum.photos/id/242/300/300.jpg">
+    </div>
+    <div>
+      <img src="" data-lazy="https://i.picsum.photos/id/243/300/300.jpg">
+    </div>
+    <div>
+      <img src="" data-lazy="https://i.picsum.photos/id/244/300/300.jpg">
+    </div>
+    <div>
+      <img src="" data-lazy="https://i.picsum.photos/id/252/300/300.jpg">
+    </div>
+    <div>
+      <img src="" data-lazy="https://i.picsum.photos/id/253/300/300.jpg">
+    </div>
+    <div>
+      <img src="" data-lazy="https://i.picsum.photos/id/247/300/300.jpg">
+    </div>
+    <div>
+      <img src="" data-lazy="https://i.picsum.photos/id/248/300/300.jpg">
+    </div>
+    <div>
+      <img src="" data-lazy="https://i.picsum.photos/id/249/300/300.jpg">
+    </div>
+    <div>
+      <img src="" data-lazy="https://i.picsum.photos/id/250/300/300.jpg">
+    </div>
+    <div>
+      <img src="" data-lazy="https://i.picsum.photos/id/251/300/300.jpg">
+    </div>
+
+    </ul>
+    <div class="center">
+     <a href="javascript:;" title="prev" class="pic-prev">prev</a>
+    <a href="javascript:;" title="next" class="pic-next">next</a> 
+    </div>
+
+  </div>
+
+
+  <script type="text/javascript">
+      $(function(){
+
+    $('.slick-center').slick({
+      prevArrow: $('.pic-prev'),
+      nextArrow: $('.pic-next'),
+      infinite: true, 
+      dots: false,
+      arrows: true,
+      autoplay: false,
+      swipe: true,
+      touchMove: false,
+      centerMode: true,
+      centerPadding: '12%',
+      slidesToShow: 3,
+      slidesToScroll: 1,
+      lazyLoad: 'progressive',
+      responsive: [
+        {
+            breakpoint: 992,
+            settings: {
+                slidesToShow: 3,
+                slidesToScroll: 1
+            }
+        },
+        {
+            breakpoint: 500,
+            settings: {
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                centerMode: false
+            }
+        },
+      ]
+    });
+
+
+
+  });
+  </script>  
+</body>
+</html>
