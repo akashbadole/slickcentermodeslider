@@ -2,7 +2,7 @@
 slick center mode slider 
 add respnsive code
 
-
+<br><pre>
 responsive: [
     {
       breakpoint: 768,
@@ -23,3 +23,4 @@ responsive: [
       }
     }
   ]
+</pre>
