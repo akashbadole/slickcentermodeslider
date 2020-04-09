@@ -12,6 +12,10 @@
 <link href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css" rel="stylesheet"/>
 <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.css"  /> -->
 <style type="text/css">
+  *{
+    overflow-x: hidden;
+    overflow-y: hidden;
+  }
   @charset "utf-8";
 /* slick original */
 /* Slider */
@@ -162,6 +166,7 @@ transition: transform .3s ease;}
   margin-top: 50px;
 }
 
+
 </style>
 </head>
 
@@ -233,12 +238,12 @@ transition: transform .3s ease;}
       infinite: true, 
       dots: false,
       arrows: true,
-      autoplay: false,
+      autoplay: true,
       swipe: true,
       touchMove: false,
       centerMode: true,
       centerPadding: '12%',
-      slidesToShow: 3,
+      slidesToShow: 5,
       slidesToScroll: 1,
       lazyLoad: 'progressive',
       responsive: [
@@ -250,11 +255,27 @@ transition: transform .3s ease;}
             }
         },
         {
-            breakpoint: 500,
+            breakpoint: 700,
             settings: {
                 slidesToShow: 1,
                 slidesToScroll: 1,
                 centerMode: false
+            }
+        },
+        {
+            breakpoint: 700,
+            settings: {
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                centerMode: false
+            }
+        },
+        {
+            breakpoint: 300,
+            settings: {
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                centerMode: true
             }
         },
       ]
